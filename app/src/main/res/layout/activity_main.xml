@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
@@ -8,28 +8,47 @@
   tools:context=".MainActivity">
 
   <TextView
+    android:id="@+id/text"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_centerVertical="true"
-    android:layout_centerHorizontal="true"
-    android:text="Activity 1"/>
+    android:text="Activity 1"
+
+    android:layout_marginTop="200dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    />
 
   <Button
     android:id="@+id/button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="200dp"
-    android:layout_alignParentBottom="true"
-    android:layout_centerHorizontal="true"
-    android:text="open activity 2"/>
+    android:text="open activity 2"
+
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/text"
+
+
+
+
+    />
 
   <Button
     android:id="@+id/button2"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="100dp"
-    android:layout_alignParentBottom="true"
-    android:layout_centerHorizontal="true"
-    android:text="open activity 3"/>
+    android:text="open activity 3"
 
-</RelativeLayout>
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/button"
+
+
+
+
+
+
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
