@@ -7,38 +7,34 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity implements OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
-  private Button button;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    Button button = findViewById(R.id.button);
-    button.setOnClickListener(this);
+    Button butt1 = findViewById(R.id.button);
+    Button butt2 = findViewById(R.id.button2);
 
-    Button button2 = findViewById(R.id.button2);
-    button2.setOnClickListener(this);
-  }
+    butt1.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent int1 = new Intent(MainActivity.this,Activity2.class);
+        startActivity(int1);
+      }
+    });
+
+    butt2.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent int2 = new Intent(MainActivity.this,Activity3.class);
+        startActivity(int2);
+      }
+    });
 
 
-  @Override
-  public void onClick(View v) {
-    openActivity2();
-    openActivity3();
-    }
-
-public void openActivity2() {
-  Intent intent  = new Intent(this, Activity2.class);
-  startActivity(intent);
-}
-
-
-public void openActivity3() {
-    Intent intent  = new Intent(this, Activity3.class);
-    startActivity(intent);
   }
 
 
