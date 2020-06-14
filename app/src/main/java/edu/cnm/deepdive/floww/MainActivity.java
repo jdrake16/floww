@@ -27,14 +27,19 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
   @Override
   public void onClick(View v) {
     openActivity2();
+    openActivity3();
     }
 
 public void openActivity2() {
   Intent intent  = new Intent(this, Activity2.class);
   startActivity(intent);
-
-
 }
+
+
+public void openActivity3() {
+    Intent intent  = new Intent(this, Activity3.class);
+    startActivity(intent);
+  }
 
 
 }
