@@ -14,6 +14,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="SQ8 Chronicles"
+    android:textSize="20sp"
 
     android:layout_marginTop="150dp"
     app:layout_constraintEnd_toEndOf="parent"
@@ -26,6 +27,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="SQ8 0"
+    android:background="@drawable/button_background"
+    android:textColor="@color/colorAccent"
 
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -37,6 +40,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="SQ8 1"
+    android:background="@drawable/button_background"
+    android:textColor="@color/colorAccent"
 
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -49,6 +54,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="SQ8 2"
+    android:background="@drawable/button_background"
+    android:textColor="@color/colorAccent"
 
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -60,6 +67,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="SQ8 3"
+    android:background="@drawable/button_background"
+    android:textColor="@color/colorAccent"
 
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -71,6 +80,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="SQ8 4"
+    android:background="@drawable/button_background"
+    android:textColor="@color/colorAccent"
 
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -81,4 +92,3 @@
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-//
