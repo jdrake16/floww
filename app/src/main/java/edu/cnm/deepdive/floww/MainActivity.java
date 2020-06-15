@@ -1,11 +1,13 @@
 package edu.cnm.deepdive.floww;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +16,12 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+    ConstraintLayout constraintLayout = findViewById(R.id.layout);
+    AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
+    animationDrawable.setEnterFadeDuration(2000);
+    animationDrawable.setExitFadeDuration(4000);
+    animationDrawable.start();
 
     Button butt1 = findViewById(R.id.button);
     Button butt2 = findViewById(R.id.button2);
