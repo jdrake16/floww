@@ -73,4 +73,12 @@ public class MainActivity extends AppCompatActivity {
   }
 
 
+  public void play(View view) {
+  }
+
+  public void pause(View view) {
+  }
+
+  public void stop(View view) {
+  }
 }
