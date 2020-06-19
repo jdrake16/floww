@@ -13,7 +13,7 @@
     android:id="@+id/text"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="SQ8 Chronicles"
+    android:text="@string/sq8_chronicles"
     android:textSize="20sp"
 
     android:layout_marginTop="150dp"
@@ -26,9 +26,10 @@
     android:id="@+id/button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="SQ8 0"
+    android:text="@string/sq8_0"
     android:background="@drawable/button_background"
     android:textColor="@color/colorAccent"
+
 
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +40,7 @@
     android:id="@+id/button2"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="SQ8 1"
+    android:text="@string/sq8_1"
     android:background="@drawable/button_background"
     android:textColor="@color/colorAccent"
 
@@ -53,7 +54,7 @@
     android:id="@+id/button3"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="SQ8 2"
+    android:text="@string/sq8_2"
     android:background="@drawable/button_background"
     android:textColor="@color/colorAccent"
 
@@ -66,7 +67,7 @@
     android:id="@+id/button4"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="SQ8 3"
+    android:text="@string/sq8_3"
     android:background="@drawable/button_background"
     android:textColor="@color/colorAccent"
 
@@ -79,7 +80,7 @@
     android:id="@+id/button5"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="SQ8 4"
+    android:text="@string/sq8_4"
     android:background="@drawable/button_background"
     android:textColor="@color/colorAccent"
 

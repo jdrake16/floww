@@ -1,3 +1,12 @@
 <resources>
   <string name="app_name">Floww</string>
+  <string name="sq8_chronicles">SQ8 Chronicles</string>
+  <string name="sq8_0">SQ8 0</string>
+  <string name="sq8_1">SQ8 1</string>
+  <string name="sq8_2">SQ8 2</string>
+  <string name="sq8_3">SQ8 3</string>
+  <string name="sq8_4">SQ8 4</string>
+  <string name="play">Play</string>
+  <string name="pause">Pause</string>
+  <string name="stop">Stop</string>
 </resources>
