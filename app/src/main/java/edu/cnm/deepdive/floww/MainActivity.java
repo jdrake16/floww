@@ -1,23 +1,34 @@
 package edu.cnm.deepdive.floww;
 
 import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
 import android.graphics.drawable.AnimationDrawable;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
+  //New additional code added with nick.
+  private int[] audioResources;
+  private int position = 0;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    ConstraintLayout constraintLayout = findViewById(R.id.layout);
+    //new code.
+    audioResources = new int[]{R.raw.chron,R.raw.chronone,R.raw.chrontwo};
+    playClips();
+
+    /*ConstraintLayout constraintLayout = findViewById(R.id.layout);
     AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
     animationDrawable.setEnterFadeDuration(2000);
     animationDrawable.setExitFadeDuration(4000);
@@ -69,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
       }
     });
 
-
+*/
   }
 
 
@@ -81,4 +92,32 @@ public class MainActivity extends AppCompatActivity {
 
   public void stop(View view) {
   }
+
+
+  // new code.
+  private void playClips(){
+    MediaPlayer mediaPlayer = new MediaPlayer();
+    mediaPlayer.setOnCompletionListener(new OnCompletionListener() {
+      @Override
+      public void onCompletion(MediaPlayer mp) {
+        position = playNext(mp,position);
+      }
+    });
+    position = playNext(mediaPlayer, position);
+  }
+
+  private int playNext(MediaPlayer mediaPlayer, int position) {
+    try {
+      if (position < audioResources.length) {
+        mediaPlayer.setDataSource(getResources().openRawResourceFd(audioResources[position++]));
+        mediaPlayer.prepare();
+        mediaPlayer.start();
+      }
+      return position;
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+
+  }
+
 }
